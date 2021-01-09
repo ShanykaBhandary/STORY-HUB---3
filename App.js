@@ -1,30 +1,17 @@
+import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View,KeyboardAvoidingView} from 'react-native';
-import ReadStoryScreen from './screens/ReadStoryScreen'
-import WriteStoryScreen from './screens/WriteStoryScreen'
-import {createBottomTabNavigator} from 'react-navigation-tabs'
+import { StyleSheet, Text, View } from 'react-native';
+import HomeScreen from './screens/HomeScreen'
 
-export default class App extends React.Component{
- render(){
-   return(
-     <View>
-     <tabNavigator/>
-
-     <TouchableOpacity
-      style={styles.submitButton}
-      onPress={this.submitStory}
-     >
-      
-       <Text>SUBMIT</Text>
-       </TouchableOpacity>
-     </View>
-   )
- }
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <Text>Open up App.js to start working on your app!</Text>
+      <StatusBar style="auto" />
+    </View>
+  );
 }
-const tabNavigator=createBottomTabNavigator({
-  ReadStory:{screen:ReadStoryScreen},
-  WriteStory:{screen:WriteStoryScreen}
-})
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -32,4 +19,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-})
+});
