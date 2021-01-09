@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "DICTIONARY",
-    "slug": "DICTIONARY",
+    "name": "story-hub",
+    "slug": "story-hub",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

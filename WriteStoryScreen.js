@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {Text,TouchableOpacity,Button,View,TextInput, StyleSheet} from 'react-native'
+import {Text,TouchableOpacity,Button,View,TextInput, StyleSheet,KeybooardAvoidingView} from 'react-native'
 export default class WriteStoryScreen extends React.Component{
     constructor(){
         super();
@@ -12,6 +12,7 @@ export default class WriteStoryScreen extends React.Component{
     render(){
         return(
             <View>
+            <KeybooardAvoidingView>
             <TextInput style={styles.ButtonSheet}
             placeholder= "ENTER TITLE OF STORY"
             onChangeText={(text)=>{
@@ -39,7 +40,9 @@ export default class WriteStoryScreen extends React.Component{
 
             <Button title= "SAVE"/>
             <Text>WELCOME TO WRITE STORY SCREEN</Text>
-            </View>
+            </KeybooardAvoidingView>
+        </View>
+          
         )
     }
 }
